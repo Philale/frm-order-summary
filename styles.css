@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+body{
+    font-size: 1em;
+    font-family: 'Red Hat Display', sans-serif;
+    background: url("images/pattern-background-desktop.svg") no-repeat, var(--pale-blue);
+    background-size: 100%;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.centerItems{
+    align-items: center;
+}
+
+.splitItems{
+    justify-content: space-between;
+}
+
+.fullWidth{
+    width: 100%;
+}
+
+.border-rad{
+    border-radius: 20px;
+}
+
+.no-margin{
+    margin: 0;
+}
+
+.gap{
+    gap: 10%;
+}
+
+.light-txt{
+    color: var(--desaturated-blue);
+}
+
+.dark-txt{
+    color: var(--dark-blue);
+}
+
+.transition{
+    transition: all .3s;
+}
+
+.hover-pointer:hover{
+    cursor: pointer;
+}
+
+main{
+    width: min(420px, 90%);
+    background-color: white;
+    overflow: hidden;
+}
+
+#content-container{
+    padding: 0 30px 30px;
+    text-align: center;
+}
+
+@media screen and (max-width: 465px){
+    #content-container{
+        padding: 0 6% 6%;
+    }
+}
+
+#plan{
+    padding: 5%;
+    background-color: var(--very-pale-blue);
+    border-radius: 10px;
+}
+
+button{
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    margin: 20px 0 0;
+    background: none;
+}
+
+button:nth-of-type(1){
+    background-color: var(--bright-blue);
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 10px 30px var(--desaturated-blue);
+}
+
+button:nth-of-type(1):hover{
+    opacity: 0.6;
+    scale: 1.02 1.1;
+}
+
+button:nth-of-type(2):hover{
+    font-weight: 700;
+}
+
+@media screen and (max-width: 320px){
+    .row{
+        flex-wrap: wrap;
+        gap:10px;
+        justify-content: center;
+    }
+}
